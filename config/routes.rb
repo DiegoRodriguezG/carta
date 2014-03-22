@@ -7,6 +7,11 @@ Carta::Application.routes.draw do
     get "sobre_nosotros" => :sobre_nosotros
   end
 
+  controller :products do
+    get "administrador" => :index
+    get "logout" => :logout
+  end
+
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.

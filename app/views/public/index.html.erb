@@ -1,0 +1,17 @@
+<h1>Bienvenidos</h1>
+<br>
+<h2>New Pitas</h2>
+<h3>Tea and Coffe</h3>
+
+<%= link_to "Sobre nosotros", controller: "public", action: "sobre_nosotros" %>
+
+<% @productos.each do |producto|%>
+	<br>
+	<br>
+	<h4><%= producto.nombre %></h4>
+	<h4><%= producto.descripcion %></h4>
+	<h4>$<%= producto.precio %></h4>
+	<%= image_tag producto.imagen_url(:menu).to_s %>
+	<br>
+	<br>
+<% end %>

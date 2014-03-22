@@ -1,0 +1,35 @@
+<h1>Bienvenido al sistema de administracion</h1>
+<h3> de Tea and Coffee</h3>
+<%= link_to 'Nuevo producto', new_product_path %>
+<%= link_to "Salir" , root_path %>
+<br>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Descripcion</th>
+      <th>Imagen</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.nombre %></td>
+        <td><%= product.precio %></td>
+        <td><%= product.descripcion %></td>
+        <td><%= product.imagen %></td>
+        <td><%= link_to 'Ver', product %></td>
+        <td><%= link_to 'Editar', edit_product_path(product) %></td>
+        <td><%= link_to 'Eliminar', product, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

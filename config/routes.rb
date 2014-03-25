@@ -6,6 +6,7 @@ Carta::Application.routes.draw do
   controller :public do 
     get "sobre_nosotros" => :sobre_nosotros
     get "descuento" => :descuento
+    get "ofertas" => :ofertas
   end
 
   controller :products do

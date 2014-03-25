@@ -10,4 +10,8 @@ class PublicController < ApplicationController
 	def descuento
 		
 	end
+
+	def ofertas
+		
+	end
 end

@@ -1,20 +1,38 @@
-<h1>Bienvenidos</h1>
-<br>
-<h2>New Pitas</h2>
-<h3>Tea and Coffe</h3>
-
-<%= link_to "Sobre nosotros", controller: "public", action: "sobre_nosotros" %>
-
-<% @productos.each do |producto|%>
-	<br>
-	<br>
-	<h4><%= producto.nombre %></h4>
-	<h4><%= producto.descripcion %></h4>
-	<h4>$<%= producto.precio %></h4>
-	<%= image_tag producto.imagen_url(:menu).to_s %>
-	<br>
-	<br>
-<% end %>
-
-<h4>Contactanos en </h4>
-<a href="www.teandcoffeenewpitas.cl">teandcoffeenewpitas.cl</a>
+<div class="row">
+  <div class="small-12 columns">
+		<% @productos.each do |producto| %>
+			<div class="row">
+				<div class="small-12 columns">
+					<div class="row">
+						<div class="large-3 small-4 columns">
+							<%= image_tag producto.imagen_url(:menu).to_s %>
+						</div>
+						<div class="large-9 small-8 columns">
+							<div class="row">
+								<div class="large-12 small-12 columns">
+									<p><strong><%= producto.nombre %></strong></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 columns">
+									<p><%= producto.descripcion %></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="small-12 columns">
+									<p><strong>$<%= producto.precio %></strong></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+<div class="row">
+	<div class="large-12 small-12 columns">
+		<h4>Contactanos en </h4>
+		<a href="http://www.teandcoffeenewpitas.cl">teandcoffeenewpitas.cl</a>
+	</div>
+</div>

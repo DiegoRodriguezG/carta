@@ -23,13 +23,16 @@
         </ul>
         <section class="top-bar-section">
           <!-- Right Nav Section -->
-          <% if current_page? root_path or current_page? public_index_path or current_page? sobre_nosotros_path %>
+          <% if current_page? root_path or current_page? root_path or current_page? sobre_nosotros_path or descuento_path %>
             <ul class="right">
               <li>
                 <%= link_to "Sobre nosotros", sobre_nosotros_path %>
               </li>
               <li>
-                <%= link_to "Nuestra carta", public_index_path %>
+                <%= link_to "Nuestra carta", root_path %>
+              </li>
+              <li>
+                <%= link_to "Descuentos", descuento_path %>
               </li>
             </ul>    
           <% end %>

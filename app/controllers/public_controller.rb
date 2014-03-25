@@ -6,4 +6,8 @@ class PublicController < ApplicationController
 	def sobre_nosotros
 		
 	end
+
+	def descuento
+		
+	end
 end

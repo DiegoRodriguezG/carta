@@ -35,7 +35,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'debugger'
+gem 'debugger', '>= 1.6.6'
 gem "carrierwave"
 gem "rmagick"
 gem 'will_paginate', '~> 3.0'

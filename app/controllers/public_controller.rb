@@ -1,8 +1,7 @@
 class PublicController < ApplicationController
 	def carta
-		@productos = Producto.where categoria_id: Categoria.first.id 
+		@productos = Producto.all
 		@categorias = Categoria.all
-		@nombre_categoria = Categoria.first.nombre
 	end
 
 	def carta_categoria

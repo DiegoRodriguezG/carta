@@ -1,9 +1,8 @@
 Carta::Application.routes.draw do
 
   root "public#index"
-  get "public/index"
 
-  controller :public do 
+  controller :public do
     get "sobre_nosotros" => :sobre_nosotros
     get "descuento" => :descuento
     get "ofertas" => :ofertas

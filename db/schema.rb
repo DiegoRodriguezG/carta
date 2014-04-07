@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140321102710) do
+ActiveRecord::Schema.define(version: 20140327065212) do
 
-  create_table "products", force: true do |t|
+  create_table "categorias", force: true do |t|
     t.string   "nombre"
-    t.integer  "precio"
-    t.string   "descripcion"
-    t.string   "imagen"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "productos", force: true do |t|
+    t.string   "nombre"
+    t.text     "descripcion"
+    t.string   "precio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "categoria_id"
+  end
+
+  create_table "usuarios", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

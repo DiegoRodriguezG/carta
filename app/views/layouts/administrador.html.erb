@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>New Pitas Tea and Coffee | Administrador</title>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "productos", "categorias" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "productos", "categorias" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="contain-to-grid">
+      <nav id="menu_superior" class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><%= link_to "Administrador", administrador_index_path %></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li>
+              <%= link_to "Productos", productos_path %>
+            </li>
+            <li>
+              <%= link_to "Categorías", categorias_path %>
+            </li>
+            <li>
+              <%= link_to "Salir", administrador_logout_path %>
+            </li>
+          </ul>    
+        </section>
+      </nav>
+    </div>
+    
+    <section role="main">
+
+      <%= yield %>
+
+    </section>
+
+    
+  </body>
+</html>

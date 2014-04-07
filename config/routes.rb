@@ -1,19 +1,30 @@
 Carta::Application.routes.draw do
 
-  root "public#index"
+  root "public#carta"
 
   controller :public do
+    get "carta" => :carta
+    get 'carta/:id', to: :carta_categoria, as: 'carta_categoria' 
     get "sobre_nosotros" => :sobre_nosotros
     get "descuento" => :descuento
     get "ofertas" => :ofertas
   end
 
-  controller :products do
-    get "login" => :index
-    get "logout" => :logout
+
+  controller :administrador do 
+    get 'administrador/logout' => :logout
   end
 
-  resources :products
+  resources :administrador, only: :index
+
+  scope '/administrador' do
+    resources :productos
+    resources :categorias
+  end
+
+  # namespace :administrador do
+  #   root to: "administrador#index"
+  # end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

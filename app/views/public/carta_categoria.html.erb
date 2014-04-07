@@ -1,0 +1,32 @@
+<div class="small-12 columns">
+	<h1>Nuestra carta</h1>
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="row">
+				<div id="categorias" class="large-3 small-4 columns text-right">
+					<h3>Categorías</h3>
+					<% @categorias.each do |categoria| %>
+						<div class="row">
+							<div class="large-12 small-12 columns">
+								<%= link_to categoria.nombre, carta_categoria_path(categoria.id) %>
+							</div>
+						</div>
+					<% end %>
+				</div>
+				<div id="productos" class="large-9 small-8 columns">
+					<h3><%= @nombre_categoria %></h3>
+					<% @productos.each do |producto| %>
+						<div class="row">
+							<div class="large-12 small-12 columns">
+								<p class="titulo_producto"><strong><%= producto.nombre %></strong></p>
+								<p class="descripcion_producto"><%= producto.descripcion %></p>
+								<p class="precio_producto"><strong>$<%= producto.precio %></strong></p>
+							</div>
+						</div>
+						<div class="linea"></div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

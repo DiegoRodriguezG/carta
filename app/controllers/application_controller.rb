@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def do_logout
-		session[:login] = nil
+		reset_session
 	  redirect_to root_path
 	end
 end

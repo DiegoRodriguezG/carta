@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="large-12 columns">
+		<p id="notice"><%= notice %></p>
+
+		<p>
+		  <strong>Nombre:</strong>
+		  <%= @producto.nombre %>
+		</p>
+
+		<p>
+		  <strong>Precio:</strong>
+		  <%= @producto.precio %>
+		</p>
+
+		<p>
+		  <strong>Descripcion:</strong>
+		  <%= @producto.descripcion %>
+		</p>
+
+		<p>
+			<strong>Categoría:</strong>
+			<%= @producto.categoria.nombre %>
+		</p>
+
+		<%= link_to 'Editar', edit_producto_path(@producto) %> |
+		<%= link_to 'Volver', productos_path %>
+	</div>
+</div>

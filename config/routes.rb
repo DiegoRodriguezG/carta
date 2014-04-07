@@ -10,7 +10,7 @@ Carta::Application.routes.draw do
   end
 
   controller :products do
-    get "administrador" => :index
+    get "login" => :index
     get "logout" => :logout
   end
 

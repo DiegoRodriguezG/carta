@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title>Tea and Coffe</title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
@@ -26,9 +26,6 @@
           <% if current_page? root_path or current_page? root_path or current_page? sobre_nosotros_path or descuento_path or ofertas_path %>
             <ul class="right">
               <li>
-                <%= link_to "Sobre nosotros", sobre_nosotros_path %>
-              </li>
-              <li>
                 <%= link_to "Nuestra carta", root_path %>
               </li>
               <li>
@@ -36,6 +33,9 @@
               </li>
               <li>
                 <%= link_to "Ofertas", ofertas_path %>
+              </li>
+              <li>
+                <%= link_to "Sobre nosotros", sobre_nosotros_path %>
               </li>
             </ul>    
           <% end %>

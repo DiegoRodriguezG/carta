@@ -21,4 +21,8 @@ class PublicController < ApplicationController
 	def ofertas
 		
 	end
+
+	def prensa
+		
+	end
 end

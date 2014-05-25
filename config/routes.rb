@@ -8,6 +8,7 @@ Carta::Application.routes.draw do
     get "sobre_nosotros" => :sobre_nosotros
     get "descuento" => :descuento
     get "ofertas" => :ofertas
+    get "prensa" => :prensa
   end
 
 

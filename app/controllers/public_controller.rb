@@ -25,4 +25,12 @@ class PublicController < ApplicationController
 	def prensa
 		
 	end
+
+	def franquicias
+		
+	end
+
+	def concursos
+		
+	end
 end

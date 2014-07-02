@@ -37,4 +37,10 @@ class PublicController < ApplicationController
 	def contacto
 		
 	end
+
+	def enviar_correo
+		ActionCorreo.bienvenido_email(params[:nombre], params[:email], params[:comantarios]).deliver
+
+		redirect_to root_path
+	end
 end

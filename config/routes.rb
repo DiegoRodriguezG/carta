@@ -12,6 +12,7 @@ Carta::Application.routes.draw do
     get "franquicias" => :franquicias
     get "concursos" => :concursos
     get "contactanos" => :contacto
+    post "enviar_correo" => :enviar_correo
   end
 
 

@@ -4,6 +4,35 @@
 	</div>
 </div>
 
+<div class="row">
+  <div class="small-7 large-7 columns">
+		
+  	<%= form_tag enviar_correo_path do %>
+			<div class="name-field">
+		    <label>Tu Nombre <small>requerido</small>
+		      <input type="text" required pattern="[a-zA-Z]+" name="nombre">
+		    </label>
+		    <small class="error">Nombre Requerido.</small>
+		  </div>
+		  <div class="email-field">
+		    <label>Email <small>requerido</small>
+		      <input type="email" required name="email">
+		    </label>
+		    <small class="error">Email Requedido.</small>
+		  </div>
+		  <div class="name-field">
+		    <label>Tus Comentarios <small>requerido</small>
+		      <textarea placeholder="Escribe tus comentarios aquí" name="comantarios"></textarea>
+		    </label>
+		    <small class="error">Comentarios Requerido.</small>
+		  </div>
+			<%= submit_tag "Enviar", :class => "button" %>
+		<% end %>
+
+	</div>
+</div>
+
+
 <div class="clear"></div>
 
 <div class="row">

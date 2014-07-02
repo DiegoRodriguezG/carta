@@ -1,8 +1,8 @@
 class ActionCorreo < ActionMailer::Base
-  default from: "drodriguezgonz@gmail.com"
+  default from: "go2schriever@gmail.com"
 
   def bienvenido_email(nombre, email, comentarios)
-  	@destinatario = "drodriguezgonz@gmail.com"
+  	@destinatario = "go2schriever@gmail.com"
 	  @nombre = nombre
 	  @email = email
 	  @comentarios  = comentarios

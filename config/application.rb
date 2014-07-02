@@ -24,5 +24,19 @@ module Carta
       "#{Gem.loaded_specs['foundation-rails'].full_gem_path}/vendor/assets/stylesheets/foundation/components",
       "#{Gem.loaded_specs['foundation-rails'].full_gem_path}/vendor/assets/stylesheets/foundation/"
     ]
+
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "teandcoffeenewpitas.cl",
+      :user_name            => "drodriguez@winnot.com",
+      :password             => "panzer000",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "teandcoffeenewpitas.cl"
+    }
   end
 end

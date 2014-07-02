@@ -33,4 +33,8 @@ class PublicController < ApplicationController
 	def concursos
 		
 	end
+
+	def contacto
+		
+	end
 end

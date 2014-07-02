@@ -11,6 +11,7 @@ Carta::Application.routes.draw do
     get "prensa" => :prensa
     get "franquicias" => :franquicias
     get "concursos" => :concursos
+    get "contactanos" => :contacto
   end
 
 

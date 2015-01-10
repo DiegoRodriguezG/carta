@@ -42,6 +42,10 @@ class PublicController < ApplicationController
 		
 	end
 
+	def eventos
+		
+	end
+
 	def enviar_correo
 		ActionCorreo.bienvenido_email(params[:nombre], params[:email], params[:comantarios]).deliver
 

@@ -38,6 +38,10 @@ class PublicController < ApplicationController
 		
 	end
 
+	def pedidos
+		
+	end
+
 	def enviar_correo
 		ActionCorreo.bienvenido_email(params[:nombre], params[:email], params[:comantarios]).deliver
 

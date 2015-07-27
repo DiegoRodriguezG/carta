@@ -40,5 +40,5 @@
 
 
 set :stage, :production
-server "173.255.215.155", user: "admin", roles: %w{web app db}
+server '45.55.162.64', user: 'deploy', roles: %w{web app}
 set :branch, "master"

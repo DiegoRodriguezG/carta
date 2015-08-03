@@ -21,3 +21,4 @@ public/uploads/
 test/unit/*
 git_clean.rb
 .DS_Store
+config/application.rb
